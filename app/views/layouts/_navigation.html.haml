@@ -1,17 +1,10 @@
-= link_to "Rails3 Bootstrap Devise Cancan", root_path, :class => 'brand'
-%ul.nav
-  - if user_signed_in?
-    %li
-      = link_to 'Logout', destroy_user_session_path, :method=>'delete'
-  - else
-    %li
-      = link_to 'Login', new_user_session_path
-  - if user_signed_in?
-    %li
-      = link_to 'Edit account', edit_user_registration_path
-    - if current_user.has_role? :admin
-      %li
-        = link_to 'Admin', users_path
-  - else
-    %li
-      = link_to 'Sign up', new_user_registration_path
+%a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+  %span.icon-bar
+  %span.icon-bar
+  %span.icon-bar
+= link_to "White Tiger Advisors", root_path, :class => 'brand'
+%ul.nav.pull-right
+  %li
+    = link_to 'About', '/about'
+  %li
+    = link_to 'Contact', '/contact'

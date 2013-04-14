@@ -5,4 +5,6 @@ Rails3BootstrapDeviseCancan::Application.routes.draw do
   root :to => "home#index"
   devise_for :users
   resources :users
+  match '/contact' => 'home#contact'
+  match '/about' => 'home#about'
 end
